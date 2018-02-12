@@ -37,7 +37,10 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
     files.forEach((file) => {
       const fileData = path.parse(file)
       const destPath = path.join(distPath, fileData.dir)
-
+      
+      // notify of concurring build
+      console.log("Building your site...");
+      
       // create destination directory
       fse.mkdirs(destPath)
         .then(() => {
@@ -72,7 +75,9 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
         })
         .then((str) => {
           // save the html file
-          fse.writeFile(`${destPath}/${fileData.name}.html`, str)
+          fse.writeFile(`${destPath}/${fileData.name}.html`, str);
+          // notify finished build
+          console.log("Build finished!");
       })
         .catch((err) => { console.error(err) })
     })
