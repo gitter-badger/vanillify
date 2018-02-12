@@ -82,7 +82,7 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
   })
   .catch((err) => { console.error(err) });
 // notify of finished/failed build
-if (error) {
+if (!error) {
   console.log("Build failed!");
 } else {
  console.log("Build finished!");
