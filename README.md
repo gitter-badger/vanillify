@@ -1,6 +1,6 @@
 # ![Luxaura.js](https://luxaura.js.org/assets/luxaura.png "Luxaura.js")
 
-[![Build Status](https://travis-ci.org/TristianK3604/Luxaura.js.svg?branch=master)](https://travis-ci.org/TristianK3604/Luxaura.js) [![Releases](https://img.shields.io/github/release/TristianK3604/Luxaura.js/all.svg)](https://github.com/TristianK3604/Luxaura.js/releases) ![devDependency Status](https://img.shields.io/david/dev/TristianK3604/Luxaura.js.svg)
+[![Build Status](https://travis-ci.org/luxaurajs/Luxaura.js.svg?branch=master)](https://travis-ci.org/luxaurajs/Luxaura.js) [![Releases](https://img.shields.io/github/release/luxaurajs/Luxaura.js/all.svg)](https://github.com/luxaurajs/Luxaura.js/releases) ![devDependency Status](https://img.shields.io/david/dev/luxaurajs/Luxaura.js.svg)
 
 A simple static site generator.
 
@@ -8,7 +8,7 @@ A simple static site generator.
 
 ## Quick Start
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TristianK3604/Luxaura.js-starter)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/TristianK3604/Luxaura.js)
 
 ## Advanced Installation
 
