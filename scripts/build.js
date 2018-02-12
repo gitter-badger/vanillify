@@ -85,9 +85,9 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
 // notify of finished/failed build
 function buildStatus(err) {
   if (err) {
-    console.log(chalk.red("Build failed!"));
+    console.log(chalk.red.bold("Build failed!"));
     return;
   }
-  console.log(chalk.green("Build finished!"));
+  console.log(chalk.green.bold("Build finished!"));
 }
 buildStatus();
