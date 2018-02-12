@@ -28,7 +28,7 @@ const distPath = './site'
 ejs.delimiter = '?';
 
 // notify of concurring build
-console.log(logSymbols.info, "%c Building your site...", "color: blue; font-weight: bold;");
+console.log(logSymbols.info, chalk.blue.bold("Building your site..."));
 
 // clear destination folder
 fse.emptyDirSync(distPath)
@@ -86,9 +86,9 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
 // notify of finished/failed build
 function buildStatus(err) {
   if (err) {
-    console.log(logSymbols.error, "%c Build failed!", "color: red; font-weight: bold;");
+    console.log(logSymbols.error, chalk.red.bold("Build failed!"));
     return;
   }
-  console.log(logSymbols.success, "%c Build finished!", "color: green; font-weight: bold;");
+  console.log(logSymbols.success, chalk.green.bold("Build finished!"));
 }
 buildStatus();
