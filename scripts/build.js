@@ -41,7 +41,7 @@ const sitemapFile = sitemap.createSitemapIndex({
       sitemapSize: 1,
       urls: configData.site.index_urls
     });
-fse.writeFile(`${destPath}/sitemap.xml`, sitemapFile)
+fse.writeFile(`${distPath}/sitemap.xml`, sitemapFile)
 
 // read pages
 globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
