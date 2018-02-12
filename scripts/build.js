@@ -38,9 +38,6 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
       const fileData = path.parse(file)
       const destPath = path.join(distPath, fileData.dir)
       
-      // notify of concurring build
-      console.log("Building your site...");
-      
       // create destination directory
       fse.mkdirs(destPath)
         .then(() => {
@@ -48,6 +45,8 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
           return fse.readFile(`content/${file}`, 'utf-8')
         })
         .then((data) => {
+          // notify of concurring build
+          console.log("Building your site...");
           // render page
           const pageData = frontMatter(data)
           const templateConfig = Object.assign({}, config, { page: pageData.attributes })
@@ -76,7 +75,7 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
         .then((str) => {
           // save the html file
           fse.writeFile(`${destPath}/${fileData.name}.html`, str);
-          // notify finished build
+          // notify of finished build
           console.log("Build finished!");
       })
         .catch((err) => { console.error(err) })
