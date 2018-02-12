@@ -36,10 +36,10 @@ fse.copy(`static`, `${distPath}`)
 // generate sitemap
 const sitemapFile = sitemap.createSitemapIndex({
       cacheTime: 600000,
-      hostname: configData.site.base_url,
+      hostname: 'https://luxaura.netlify.com',
       sitemapName: 'sitemap',
       sitemapSize: 1,
-      urls: configData.site.index_urls
+      urls: ['/index.html', '/syntax-highlighting.html']
     });
 fse.writeFile(`${distPath}/sitemap.xml`, sitemapFile)
 
