@@ -89,3 +89,4 @@ function buildStatus(err) {
   }
   console.log("Build finished!");
 }
+buildStatus();
