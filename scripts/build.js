@@ -1,6 +1,7 @@
 const fse = require('fs-extra')
 const path = require('path')
 const ejs = require('ejs')
+const sitemap = require('sitemap')
 const hljs = require('highlight.js')
 const { promisify } = require('util')
 const pug = require('pug')
