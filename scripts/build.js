@@ -27,7 +27,7 @@ const distPath = './site'
 ejs.delimiter = '?';
 
 // notify of concurring build
-console.log(chalk.teal("Building your site..."));
+console.log(chalk.blue.bold("Building your site..."));
 
 // clear destination folder
 fse.emptyDirSync(distPath)
