@@ -1,6 +1,7 @@
 const fse = require('fs-extra')
 const path = require('path')
 const ejs = require('ejs')
+const sitemap = require('sitemap')
 const hljs = require('highlight.js')
 const chalk = require('chalk')
 const logSymbols = require('log-symbols')
@@ -20,6 +21,7 @@ const markdownIt = require('markdown-it')({
 const frontMatter = require('front-matter')
 const globP = promisify(require('glob'))
 const config = require('../site.config')
+const configData = Object.assign({}, config)
 
 const ejsRenderFile = promisify(ejs.renderFile)
 const distPath = './site'
@@ -35,6 +37,16 @@ fse.emptyDirSync(distPath)
 
 // copy static folder
 fse.copy(`static`, `${distPath}`)
+
+// generate sitemap
+const sitemapFile = sitemap.createSitemapIndex({
+      cacheTime: 600000,
+      hostname: 'https://luxaura.netlify.com',
+      sitemapName: 'sitemap',
+      sitemapSize: 1,
+      urls: ['/index.html', '/syntax-highlighting.html']
+    });
+fse.writeFile(`${distPath}/sitemap.xml`, sitemapFile)
 
 // read pages
 globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
