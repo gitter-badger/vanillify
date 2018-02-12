@@ -25,6 +25,9 @@ const distPath = './site'
 // set ejs delimiter
 ejs.delimiter = '?';
 
+// notify of concurring build
+console.log("Building your site...");
+
 // clear destination folder
 fse.emptyDirSync(distPath)
 
@@ -45,8 +48,6 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
           return fse.readFile(`content/${file}`, 'utf-8')
         })
         .then((data) => {
-          // notify of concurring build
-          console.log("Building your site...");
           // render page
           const pageData = frontMatter(data)
           const templateConfig = Object.assign({}, config, { page: pageData.attributes })
