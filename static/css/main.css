@@ -1,11 +1,4 @@
 @font-face {
-    font-family: 'Source Sans Pro';
-    src: url('../fonts/sourcesanspro-regular-webfont.woff2') format('woff2'), url('../fonts/sourcesanspro-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
     font-family: 'Open Sans';
     src: url('../fonts/opensans-regular-webfont.woff2') format('woff2'), url('../fonts/opensans-regular-webfont.woff') format('woff');
     font-weight: normal;
@@ -13,7 +6,7 @@
 }
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body,input {
