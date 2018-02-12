@@ -76,10 +76,10 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
         .then((str) => {
           // save the html file
           fse.writeFile(`${destPath}/${fileData.name}.html`, str);
-          // notify of finished build
-          console.log("Build finished!");
       })
         .catch((err) => { console.error(err) })
     })
   })
-  .catch((err) => { console.error(err) })
+  .catch((err) => { console.error(err) });
+ // notify of finished build
+ console.log("Build finished!");
