@@ -19,6 +19,7 @@ const markdownIt = require('markdown-it')({
 const frontMatter = require('front-matter')
 const globP = promisify(require('glob'))
 const config = require('../site.config')
+const configData = Object.assign({}, config)
 
 const ejsRenderFile = promisify(ejs.renderFile)
 const distPath = './site'
@@ -31,6 +32,16 @@ fse.emptyDirSync(distPath)
 
 // copy static folder
 fse.copy(`static`, `${distPath}`)
+
+// generate sitemap
+const sitemapFile = sitemap.createSitemapIndex({
+      cacheTime: 600000,
+      hostname: configData.site.base_url,
+      sitemapName: 'sitemap',
+      sitemapSize: 1,
+      urls: configData.site.index_urls
+    });
+fse.writeFile(`${destPath}/sitemap.xml`, sitemapFile)
 
 // read pages
 globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
