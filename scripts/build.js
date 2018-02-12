@@ -3,6 +3,7 @@ const path = require('path')
 const ejs = require('ejs')
 const hljs = require('highlight.js')
 const chalk = require('chalk')
+const logSymbols = require('log-symbols')
 const { promisify } = require('util')
 const pug = require('pug')
 const markdownIt = require('markdown-it')({
@@ -27,7 +28,7 @@ const distPath = './site'
 ejs.delimiter = '?';
 
 // notify of concurring build
-console.log(chalk.blue.bold("Building your site..."));
+console.log(chalk.blue.bold(logSymbols.info, "Building your site..."));
 
 // clear destination folder
 fse.emptyDirSync(distPath)
@@ -85,9 +86,9 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
 // notify of finished/failed build
 function buildStatus(err) {
   if (err) {
-    console.log(chalk.red.bold("Build failed!"));
+    console.log(chalk.red.bold(logSymbols.error, "Build failed!"));
     return;
   }
-  console.log(chalk.green.bold("Build finished!"));
+  console.log(chalk.green.bold(logSymbols.success, "Build finished!"));
 }
 buildStatus();
