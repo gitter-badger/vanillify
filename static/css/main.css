@@ -5,12 +5,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'PT Mono';
+    src: url('ptm55ft-webfont.woff2') format('woff2'),
+         url('ptm55ft-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 h1,h2,h3,h4,h5,h6 {
     font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 body,input {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
 .jumbotron-fluid > .container {
@@ -21,6 +29,11 @@ body,input {
     background: #4ECDC4;
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);
     background: linear-gradient(to right, #556270, #4ECDC4);
+}
+
+code,
+pre {
+    font-family: 'PT Mono','Roboto Mono', 'Ubuntu Mono', Consolas, Monaco, 'Andale Mono', monospace;
 }
 
 code {
