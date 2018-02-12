@@ -2,6 +2,7 @@ const fse = require('fs-extra')
 const path = require('path')
 const ejs = require('ejs')
 const hljs = require('highlight.js')
+const chalk = require('chalk')
 const { promisify } = require('util')
 const pug = require('pug')
 const markdownIt = require('markdown-it')({
@@ -26,7 +27,7 @@ const distPath = './site'
 ejs.delimiter = '?';
 
 // notify of concurring build
-console.log("Building your site...");
+console.log(chalk.teal("Building your site..."));
 
 // clear destination folder
 fse.emptyDirSync(distPath)
@@ -84,9 +85,9 @@ globP('**/*.@(md|markdown|html|pug)', { cwd: `content` })
 // notify of finished/failed build
 function buildStatus(err) {
   if (err) {
-    console.log("Build failed!");
+    console.log(chalk.red("Build failed!"));
     return;
   }
-  console.log("Build finished!");
+  console.log(chalk.green("Build finished!"));
 }
 buildStatus();
