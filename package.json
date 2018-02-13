@@ -1,22 +1,26 @@
 {
-	"name": "Vanillify",
-	"version": "0.0.1",
-	"description": "A vanilla static site generator",
-	"repository": "TristianK3604/vanillify",
-	"license": "The Unlicense",
+	"name": "Luxaura.js",
+	"version": "0.1.0",
+	"description": "A simple static site generator",
+	"repository": "TristianK3604/Luxaura.js",
+	"license": "Unlicense",
 	"author": "Tristian Kelly",
 	"main": "index.js",
 	"scripts": {
 		"build": "node ./scripts/build",
-		"serve": "serve ./public"
+		"serve": "serve ./site"
 	},
 	"devDependencies": {
     		"ejs": "^2.5.7",
     		"front-matter": "^2.3.0",
     		"fs-extra": "^5.0.0",
     		"glob": "^7.1.2",
-    		"marked": "^0.3.12",
-    		"serve": "^6.4.8",
-    		"standard": "^10.0.3"
+    		"serve": "^6.4.9",
+    		"standard": "^10.0.3",
+		"pug": "^2.0.0-rc.4",
+		"markdown-it": "^8.4.0",
+		"highlight.js": "^9.12.0",
+		"chalk": "^2.3.1",
+		"log-symbols": "^2.2.0"
 	}
 }

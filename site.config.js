@@ -1,6 +1,6 @@
 module.exports = {
   site: {
-    title: 'Vanillify',
-    description: 'A vanilla static site generator'
+    title: 'Luxaura.js',
+    description: 'A simple static site generator'
   }
 }

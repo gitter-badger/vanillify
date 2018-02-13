@@ -1,9 +1,6 @@
 # ![Luxaura.js](https://luxaura.js.org/assets/luxaura.png "Luxaura.js")
 
-[![Join the chat at https://gitter.im/luxaurajs/Luxaura.js](https://badges.gitter.im/luxaurajs/Luxaura.js.svg)](https://gitter.im/luxaurajs/Luxaura.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-[![Build Status](https://travis-ci.org/luxaurajs/Luxaura.js.svg?branch=master)](https://travis-ci.org/luxaurajs/Luxaura.js) [![Releases](https://img.shields.io/github/release/luxaurajs/Luxaura.js/all.svg)](https://github.com/luxaurajs/Luxaura.js/releases) ![devDependency Status](https://img.shields.io/david/dev/luxaurajs/Luxaura.js.svg)
-
+[![Build Status](https://travis-ci.org/luxaurajs/Luxaura.js.svg?branch=master)](https://travis-ci.org/luxaurajs/Luxaura.js) [![Releases](https://img.shields.io/github/release/luxaurajs/Luxaura.js/all.svg)](https://github.com/luxaurajs/Luxaura.js/releases) ![devDependency Status](https://img.shields.io/david/dev/luxaurajs/Luxaura.js.svg) [![Join the chat at https://gitter.im/luxaurajs/Luxaura.js](https://badges.gitter.im/luxaurajs/Luxaura.js.svg)](https://gitter.im/luxaurajs/Luxaura.js?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 A simple static site generator.
 
 # Installation
